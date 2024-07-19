@@ -1,12 +1,23 @@
-function createArrayOfSize(n) {
-  return new Array(n).fill(0);
-}
+import React from 'react';
 
-function Pagination() {
-  let pages = createArrayOfSize(totalPages).map((a, i) => {
-    return <button data-testid="page-btn"></button>;
-  });
-  return <div></div>;
-}
+const Pagination = ({ totalItems, currentPage, pageSize, onPageChange }) => {
+  const totalPages = Math.ceil(totalItems / pageSize);
+  const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+
+  return (
+    <div>
+      {pages.map((page) => (
+        <button
+          key={page}
+          data-testid="page-btn"
+          onClick={() => onPageChange(page)}
+          className={page === currentPage ? 'active' : ''}
+        >
+          {page}
+        </button>
+      ))}
+    </div>
+  );
+};
 
 export default Pagination;

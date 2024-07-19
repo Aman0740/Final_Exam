@@ -11,8 +11,8 @@
 
 .department_list {
   font-family: Arial, sans-serif;
-  background-color: #4CAF50; /* Green background */
-  color: white; /* White text */
+  background-color: #e1e1e1; /* Green background */
+  color: black; /* White text */
   padding: 10px; /* Some padding */
   border: none; /* Remove default border */
   border-radius: 4px; /* Rounded corners */
@@ -41,7 +41,7 @@
 }
 
 .table_container tr:nth-child(even) {
-  background-color: #f2f2f2; /* Light grey background for even rows */
+  background-color: #d4a8be; /* Light grey background for even rows */
 }
 
 .table_container tr:hover {
@@ -55,4 +55,7 @@
 .table_container th {
   padding-top: 12px;
   padding-bottom: 12px;
+}
+button.active {
+  background-color: lawngreen;
 }
